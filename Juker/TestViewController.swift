@@ -111,10 +111,10 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func progressViewSetup() {
         
-        let frame = CGRect(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y, width: jukeView.bounds.width, height: 130)
+        let frame = CGRect(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y, width: jukeView.bounds.width, height: 120)
         let p1 = CGPoint(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y + 2)
         let p2 = CGPoint(x: jukeView.bounds.width, y: jukeView.bounds.origin.y + 2)
-        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 130)
+        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 120)
         
         let path = UIBezierPath()
         
@@ -1074,7 +1074,7 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let p1 = CGPoint(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y + 2)
         let p2 = CGPoint(x: jukeView.bounds.width, y: jukeView.bounds.origin.y + 2)
-        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 130)
+        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 120)
         addCurve(startPoint: p1, endPoint: p2, controlPoint: controlP)
     }
     
