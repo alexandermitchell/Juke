@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-rect" translatesAutoresizingMaskIntoConstraints="NO" id="ZQW-Of-urC" customClass="DraggableView" customModule="Juker" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="placeholder-rect" translatesAutoresizingMaskIntoConstraints="NO" id="ZQW-Of-urC" customClass="DraggableView" customModule="Juker" customModuleProvider="target">
                                 <rect key="frame" x="62" y="141" width="251" height="305"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="305" id="xWP-PN-LDi"/>
@@ -123,7 +123,6 @@
                             <constraint firstItem="ZQW-Of-urC" firstAttribute="top" secondItem="jmu-jH-Iq2" secondAttribute="bottom" constant="121" id="AB8-yn-Hig"/>
                             <constraint firstItem="jTZ-y4-k39" firstAttribute="top" secondItem="hSu-bR-tyR" secondAttribute="bottom" id="LB0-fg-PDW"/>
                             <constraint firstItem="hSu-bR-tyR" firstAttribute="centerX" secondItem="KXt-gA-Pox" secondAttribute="centerX" id="OKD-up-UhT"/>
-                            <constraint firstItem="ZQW-Of-urC" firstAttribute="centerX" secondItem="KXt-gA-Pox" secondAttribute="centerX" id="fXL-yC-mb6"/>
                             <constraint firstItem="hSu-bR-tyR" firstAttribute="width" secondItem="KXt-gA-Pox" secondAttribute="width" id="wUR-th-NvE"/>
                         </constraints>
                     </view>

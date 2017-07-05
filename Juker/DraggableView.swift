@@ -29,6 +29,7 @@ class DraggableView: UIImageView {
     var overlayView: OverlayView!
     var xFromCenter: CGFloat!
     var yFromCenter: CGFloat!
+    var centerXConstraint: NSLayoutConstraint!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -48,6 +49,7 @@ class DraggableView: UIImageView {
 //        self.layer.masksToBounds = true
         
         self.isUserInteractionEnabled = true
+        self.isMultipleTouchEnabled = true
         
         
 //        xFromCenter = 0
@@ -75,8 +77,11 @@ class DraggableView: UIImageView {
         
         switch gestureRecognizer.state {
         case UIGestureRecognizerState.began:
+            
             print("pan began")
         case UIGestureRecognizerState.changed:
+            centerXConstraint.constant = xFromCenter
+            
             print("pan changed")
             print(xFromCenter)
             let rotationStrength: CGFloat = min(xFromCenter/ROTATION_STRENGTH, ROTATION_MAX)
@@ -94,6 +99,8 @@ class DraggableView: UIImageView {
             UIView.animate(withDuration: 0.2, animations: {() -> Void in
                 self.center = self.originPoint
                 self.transform = CGAffineTransform(rotationAngle: 0)
+                self.centerXConstraint.constant = 0
+                
                 //self.overlayView.alpha = 0
             })
 

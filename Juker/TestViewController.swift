@@ -15,6 +15,8 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: - Properties
     
+    var customProgress: CustomProgressView!
+    
     var imageCache = [String:UIImage]() {
         willSet {
             if imageCache.count >= 100 {
@@ -107,7 +109,23 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var tapView: UIView!
     
     
+    func progressViewSetup() {
+        
+        let frame = CGRect(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y, width: jukeView.bounds.width, height: 130)
+        let p1 = CGPoint(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y + 2)
+        let p2 = CGPoint(x: jukeView.bounds.width, y: jukeView.bounds.origin.y + 2)
+        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 130)
+        
+        let path = UIBezierPath()
+        
+        path.move(to: p1)
+        path.addQuadCurve(to: p2, controlPoint: controlP)
+        
+        customProgress = CustomProgressView(frame: frame, path: path)
+        jukeView.addSubview(customProgress)
+        
     
+    }
     
     //MARK: - Lifecycle Methods
     
@@ -116,8 +134,7 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         setupQuadCurve()
-        
-        
+
         originalHeight = jukeHeight.constant
         albumImage.layer.cornerRadius = 10
         songTimer.delegate = self
@@ -128,10 +145,13 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
         trackProgressView.layer.cornerRadius = 0
         trackProgressView.backgroundColor = UIColor.lightGray
         
+        albumImage.centerXConstraint = albumImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+        albumImage.centerXConstraint.isActive = true
         
         playlistTableSetup()
         searchWrapperSetup()
         
+        progressViewSetup()
         
         
         
@@ -481,7 +501,12 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func updateProgressBar(){
         trackProgressView.setProgress(Float(songTimer.timeElapsed) / songTimer.totalSongTime, animated: true)
+        
+        customProgress.progress = Float(songTimer.timeElapsed) / songTimer.totalSongTime
+        
     }
+    
+    
     
     func initializePlayer(authSession:SPTSession){
         if self.player == nil {
@@ -1049,7 +1074,7 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let p1 = CGPoint(x: jukeView.bounds.origin.x, y: jukeView.bounds.origin.y + 2)
         let p2 = CGPoint(x: jukeView.bounds.width, y: jukeView.bounds.origin.y + 2)
-        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 120)
+        let controlP = CGPoint(x: jukeView.bounds.width / 2, y: jukeView.bounds.origin.y - 130)
         addCurve(startPoint: p1, endPoint: p2, controlPoint: controlP)
     }
     

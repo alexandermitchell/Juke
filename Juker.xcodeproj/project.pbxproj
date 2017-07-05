@@ -21,6 +21,7 @@
 		D014D0691EF45E9900A2E525 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014D0681EF45E9900A2E525 /* TestViewController.swift */; };
 		D014D06B1EF49CFD00A2E525 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014D06A1EF49CFD00A2E525 /* DraggableView.swift */; };
 		D014D06D1EF4A17900A2E525 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014D06C1EF4A17900A2E525 /* OverlayView.swift */; };
+		D03E1E8A1F0C37DA00EB4B34 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E1E891F0C37DA00EB4B34 /* CustomProgressView.swift */; };
 		D0709D9E1EF875B8003ED610 /* PlaylistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0709D9C1EF875B8003ED610 /* PlaylistTableCell.swift */; };
 		D0709D9F1EF875B8003ED610 /* PlaylistTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0709D9D1EF875B8003ED610 /* PlaylistTableCell.xib */; };
 		D09105F81EEF5D5800AD29BB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09105F71EEF5D5800AD29BB /* DataManager.swift */; };
@@ -60,6 +61,7 @@
 		D014D0681EF45E9900A2E525 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D014D06A1EF49CFD00A2E525 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		D014D06C1EF4A17900A2E525 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		D03E1E891F0C37DA00EB4B34 /* CustomProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		D0709D9C1EF875B8003ED610 /* PlaylistTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableCell.swift; sourceTree = "<group>"; };
 		D0709D9D1EF875B8003ED610 /* PlaylistTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTableCell.xib; sourceTree = "<group>"; };
 		D09105F71EEF5D5800AD29BB /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				D014D06A1EF49CFD00A2E525 /* DraggableView.swift */,
 				D014D06C1EF4A17900A2E525 /* OverlayView.swift */,
+				D03E1E891F0C37DA00EB4B34 /* CustomProgressView.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				D09105FA1EEF5E5300AD29BB /* JukeBoxManager.swift in Sources */,
 				928F84401EF83C4800614716 /* Event.swift in Sources */,
 				D0AF20BA1EFB3A5500D34E56 /* SearchTrackCell.swift in Sources */,
+				D03E1E8A1F0C37DA00EB4B34 /* CustomProgressView.swift in Sources */,
 				928F843E1EF6FB0000614716 /* SongTimer.swift in Sources */,
 				D014D06D1EF4A17900A2E525 /* OverlayView.swift in Sources */,
 				9241B52F1EF309430059335C /* PlaylistViewController.swift in Sources */,
