@@ -1,8 +1,7 @@
-#Juker
-![screenshot](screenshot/screenshot.png)
-##Lighthouse Labs Final Project - By Marc Maguire and Alex Mitchell
+# Juker
+## Lighthouse Labs Final Project - By Marc Maguire and Alex Mitchell
 
-###Timeline:
+### Timeline:
 
 Ideation and initial research began on June 10th at 1:00PM.
 by 4:00 PM on the 11th we had decided to move forward with the idea of building a social jukebox.
@@ -23,7 +22,7 @@ a party and collaborate in real time over a central music playlist. Users can ad
 could result in the song being removed from the queue) and like songs that they want added to their person Spotify saved songs 
 for future viewing.
 
-###Moving forward:
+### Moving forward:
 
 - Add a backend to our app that would communicate with Spotify servers to refresh our access tokens. Currently the tokens are
   only good for 60 minutes.
@@ -31,3 +30,6 @@ for future viewing.
 based on the flow they choose when using the app (hosting a party or joining an existing one) currently this communication is handled
 through an event object that we pass between all connected users. This doesn't follow proper programming principles and the first
 thing I will be doing after we are done presenting is refactoring this logic to conform to the State pattern.
+
+### Screenshot:
+![screenshot](screenshot/screenshot.png)
