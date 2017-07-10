@@ -1,5 +1,5 @@
 #Juker
-![screenshot](screenshot.png)
+![screenshot](screenshot/screenshot.png)
 ##Lighthouse Labs Final Project - By Marc Maguire and Alex Mitchell
 
 ###Timeline:
