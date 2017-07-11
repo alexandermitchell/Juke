@@ -72,6 +72,9 @@ class LoginViewController: UIViewController,SPTAudioStreamingDelegate, SPTAudioS
         setup()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: NSNotification.Name(rawValue: "loginSuccessfull"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -237,6 +240,18 @@ class LoginViewController: UIViewController,SPTAudioStreamingDelegate, SPTAudioS
             dvc.session = session
         }
     }
+    
+    func willEnterForeground () {
+        
+        UIView.animate(withDuration: 0.1, animations: {() -> Void in
+            self.slideButtonLeadAnchor.constant = 0
+            self.slideLabel.layer.opacity = 1.0
+            self.panBackgroundWidthAnchor.constant = 70
+            self.view.updateConstraints()
+            self.view.layoutIfNeeded()
+        })
+    }
+    
     //MARK: Audio Player Methods
     
 //    func initializePlayer(authSession:SPTSession){
