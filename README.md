@@ -35,4 +35,4 @@ through an event object that we pass between all connected users. This doesn't f
 thing I will be doing after we are done presenting is refactoring this logic to conform to the State pattern.
 
 ### Screenshot:
-![screenshot](screenshot/screenshot.png)
+![screenshot](screenshot/juker_screenshot.png)
